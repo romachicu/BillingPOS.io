@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>POS Invoice</h1>
+  <div class="container">
+    <div class="container-pos">
+      <div class="card-pos">
+        <div class="bill-amount">
+          <h2>Bill Amount</h2>
+          <input type="number" id="bill" placeholder="1000$" required>
+        </div>
+
+        <div class="tips-amount">
+          <h2>Select Tip</h2>
+          <div class="tips-amount-card">
+            <input type="button" id="select-tip-5" class="select-tip" name="5%" value="5%">
+            <input type="button" id="select-tip-10" class="select-tip" name="10%" value="10%">
+            <input type="button" id="select-tip-15" class="select-tip" name="15%" value="15%">
+            <input type="button" id="select-tip-25" class="select-tip" name="25%" value="25%">
+            <input type="button" id="select-tip-50" class="select-tip" name="50%" value="50%">
+            <input type="number" id="custom-tip" placeholder="Custom %" name="custom-tip">
+          </div>
+        </div>
+
+
+        <div class="bill-amount">
+          <h2>Number of People</h2>
+          <input type="number" id="people" placeholder="2 person" class="people" required>
+        </div>
+
+        <div class='reset-input-btn'>
+          <input type="button" name="reset" value="RESET" class="resetBtn" required>
+        </div>
+      </div>
+
+      <div class="card-pos-right">
+        <div class="container-resum">
+          <div class="total-amount-desc">
+            <div class="tips-amount">
+              <h2>Tip Amount</h2>
+              <h3>/person</h3>
+            </div>
+            <div>
+              <h2>Total per Person</h2>
+              <h3>/person</h3>
+            </div>
+            <hr>
+          </div>
+          <div class="total-amount-desc">
+            <h2 id="tipAmount">0.00<span> $</span></h2><br><br>
+            <h2 id="totalPerPerson">0.00<span> $</span></h2><br><br>
+            <div><h2 id="totalAmount">0.00<span> $</span></h2></div>
+          </div>
+        </div>
+        <div>
+          <input type="button" id="invoice" name="invoice" value="BILLING" required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
