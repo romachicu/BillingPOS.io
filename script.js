@@ -9,70 +9,60 @@ let totalPerPersonElement = document.querySelector("#totalPerPerson");
 let resetBtn = document.querySelector(".resetBtn");
 let selectTips = document.querySelectorAll(".select-tip");
 
-
 let selectedTip = null;
-
 
 function calculateBill() {
   let billAmount = Number(bill.value);
   let numberOfPeople = Math.max(Number(people.value), 1);
 
-
   let tip = selectedTip !== null ? selectedTip : Number(customTip.value) || 0;
 
-  let tipAmount = ((billAmount * tip)/numberOfPeople) / 100;
-  let totalAmount = billAmount + tipAmount;
+  let tipAmount = (billAmount * tip) / numberOfPeople / 100;
+  let totalAmount = billAmount + tipAmount * numberOfPeople;
   let totalPerPerson = totalAmount / numberOfPeople;
 
-  tipAmountElement.innerHTML = tipAmount.toFixed(2) + ' $';
-  totalAmountElement.innerHTML = totalAmount.toFixed(2) + ' $';
-  totalPerPersonElement.innerHTML = totalPerPerson.toFixed(2) + ' $';
+  tipAmountElement.innerHTML = tipAmount.toFixed(2) + " $";
+  totalAmountElement.innerHTML = totalAmount.toFixed(2) + " $";
+  totalPerPersonElement.innerHTML = totalPerPerson.toFixed(2) + " $";
 }
-
 
 function reset() {
   bill.value = "";
   customTip.value = "";
   people.value = "";
-  selectedTip = null; 
+  selectedTip = null;
   tipAmountElement.innerHTML = "0.00 $";
   totalAmountElement.innerHTML = "0.00 $";
   totalPerPersonElement.innerHTML = "0.00 $";
 }
 
-
 function handleTipClick(event) {
-  selectedTip = Number(event.target.value.replace('%', ''));
+  selectedTip = Number(event.target.value.replace("%", ""));
   calculateBill();
 }
 
 bill.addEventListener("input", calculateBill);
 people.addEventListener("input", calculateBill);
 
-
 customTip.addEventListener("input", () => {
   selectedTip = Number(customTip.value) || null;
   calculateBill();
 });
 
-
-selectTips.forEach(button => {
+selectTips.forEach((button) => {
   button.addEventListener("click", handleTipClick);
 });
 
 resetBtn.addEventListener("click", reset);
 
 function handleTipClick(event) {
-
-  selectTips.forEach(button => {
+  selectTips.forEach((button) => {
     button.classList.remove("active");
   });
 
   event.target.classList.add("active");
 
-
-  selectedTip = Number(event.target.value.replace('%', ''));
+  selectedTip = Number(event.target.value.replace("%", ""));
 
   calculateBill();
- 
 }
