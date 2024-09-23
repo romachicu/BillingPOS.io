@@ -1,11 +1,11 @@
 .container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   align-content: center;
   align-self: center;
   flex-wrap: wrap;
-  
+
 }
 
 .container-pos {
@@ -14,7 +14,7 @@
   justify-content: space-between;
   width: 1200px;
   height: auto;
- 
+
   border: 1px solid #ccc;
   border-radius: 5px;
   align-items: center;
@@ -80,9 +80,10 @@
   height: 50px;
   gap: 20px;
   font-size: 25px;
-   background-color: #34ebe5;
+  background-color: #34ebe5;
   border-radius: 10px;
 }
+
 .tips-amount-card [type="button"]:hover {
   display: flex;
   flex-wrap: wrap;
@@ -91,8 +92,9 @@
   height: 50px;
   gap: 20px;
   font-size: 25px;
-   background-color: #34eb74;
+  background-color: #34eb74;
 }
+
 .tips-amount-card [type="button"].active {
   display: flex;
   flex-wrap: wrap;
@@ -114,13 +116,14 @@
   gap: 20px;
   font-size: 25px;
   align-self: center;
-   border-radius: 10px;
+  border-radius: 10px;
 }
+
 input::placeholder {
-  color: #888; 
-  font-size: 25px; 
+  color: #888;
+  font-size: 25px;
   font-style: italic;
-  opacity: 1; 
+  opacity: 1;
   display: flex;
   justify-content: end;
   align-items: end;
@@ -144,6 +147,7 @@ h2 {
   padding: 0;
   height: 130px;
 }
+
 h1 {
   display: flex;
   justify-content: center;
@@ -171,15 +175,17 @@ h1 {
   font-size: 25px;
   color: #000;
   border-radius: 10px;
-  
+
 }
+
 h3 {
   font-size: 18px;
 }
-hr{
+
+hr {
   position: fixed;
   border: 1px solid #000;
-  width:500px;
+  width: 500px;
 }
 
 .reset-input-btn [type="button"] {
@@ -192,27 +198,27 @@ hr{
 }
 
 .reset-input-btn [type="button"]:hover,
-.reset-input-btn [type="button"]:active{
+.reset-input-btn [type="button"]:active {
   width: 460px;
   height: 50px;
   margin-top: 65px;
   font-size: 25px;
   color: #000;
   border-radius: 10px;
- background-color: #34ebe5;
+  background-color: #34ebe5;
 }
 
 
 
 .card-pos-right [type="button"]:hover,
 .card-pos-right [type="button"]:active,
-.card-pos-right [type="button"]:focus{
+.card-pos-right [type="button"]:focus {
   width: 500px;
   height: 50px;
   font-size: 25px;
   color: #000;
   border-radius: 10px;
-   background-color:#eb3477;
+  background-color: #eb3477;
   border: 2px solid #fff;
 }
 
@@ -221,7 +227,7 @@ hr{
   right: -20px;
   top: -48px;
   margin: 0;
-  
+
 }
 
 
