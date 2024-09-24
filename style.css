@@ -184,7 +184,7 @@ h3 {
 }
 
 hr {
-  position: fixed;
+  position: relative;
   border: 1px solid #000;
   width: 500px;
 }
@@ -239,3 +239,28 @@ hr {
   margin: 0;
 
 }
+
+.hr-line {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: end;
+	align-content: end;
+	align-items: end;
+	align-self:end;
+	top: -160px;
+}
+
+#totalAmount {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: end;
+	align-content: end;
+	align-items: end;
+	align-self:end;
+	margin: 5px;
+	gap:5px;
+	top: 0;
+}
+	
