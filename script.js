@@ -12,8 +12,10 @@ let selectTips = document.querySelectorAll(".select-tip");
 let selectedTip = null;
 
 function calculateBill() {
-  let billAmount = Number(bill.value);
-  let numberOfPeople = Math.max(Number(people.value), 1);
+
+  let billAmount = Math.max(Number(bill.value), 0); 
+  let numberOfPeople = Math.max(Number(people.value), 1); 
+  
 
   let tip = selectedTip !== null ? selectedTip : Number(customTip.value) || 0;
 
