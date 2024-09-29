@@ -17,7 +17,7 @@ function calculateBill() {
   let numberOfPeople = Math.max(Number(people.value), 1); 
   
 
-  let tip = selectedTip !== null ? selectedTip : Number(customTip.value) || 0;
+  let tip = selectedTip !== null ? selectedTip : Math.max(Number(customTip.value), 0)
 
   let tipAmount = (billAmount * tip) / numberOfPeople / 100;
   let totalAmount = billAmount + tipAmount * numberOfPeople;
