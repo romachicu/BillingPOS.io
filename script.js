@@ -15,7 +15,7 @@ function calculateBill() {
 
   let billAmount = Math.max(Number(bill.value), 0); 
   let numberOfPeople = Math.max(Number(people.value), 1); 
-  
+
 
   let tip = selectedTip !== null ? selectedTip : Math.max(Number(customTip.value), 0)
 
@@ -43,16 +43,24 @@ function handleTipClick(event) {
   calculateBill();
 }
 
+bill.addEventListener("keydown", function(event) {
+  if (event.key === '-' || event.keyCode === 189 || event.keyCode === 109) {
+    event.preventDefault();
+  }
+});
+
 bill.addEventListener("input", calculateBill);
 people.addEventListener("input", calculateBill);
 
 customTip.addEventListener("input", () => {
   selectedTip = Math.max(Number(customTip.value), 0);
+
   calculateBill();
 });
 
 selectTips.forEach((button) => {
   button.addEventListener("click", handleTipClick);
+  
 });
 
 resetBtn.addEventListener("click", reset);
