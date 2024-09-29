@@ -47,7 +47,7 @@ bill.addEventListener("input", calculateBill);
 people.addEventListener("input", calculateBill);
 
 customTip.addEventListener("input", () => {
-  selectedTip = Number(customTip.value) || null;
+  selectedTip = Math.max(Number(customTip.value), 0);
   calculateBill();
 });
 
